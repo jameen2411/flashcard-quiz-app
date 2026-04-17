@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Flashcard Quiz App</h1>
+        
+        <!-- Flashcard Display -->
+        <div class="flashcard-section">
+            <div id="flashcard" class="flashcard">
+                <div class="card-content">
+                    <p id="cardText">No cards available. Add a flashcard to get started!</p>
+                </div>
+                <button id="showAnswerBtn" class="show-answer-btn">Show Answer</button>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="navigation">
+                <button id="prevBtn" class="nav-btn">← Previous</button>
+                <span id="cardCounter" class="card-counter">0 / 0</span>
+                <button id="nextBtn" class="nav-btn">Next →</button>
+            </div>
+        </div>
+
+        <!-- Add/Edit Flashcard Section -->
+        <div class="form-section">
+            <h2>Add or Edit Flashcard</h2>
+            <form id="flashcardForm">
+                <div class="form-group">
+                    <label for="question">Question:</label>
+                    <input type="text" id="question" placeholder="Enter question" required>
+                </div>
+                <div class="form-group">
+                    <label for="answer">Answer:</label>
+                    <textarea id="answer" placeholder="Enter answer" rows="3" required></textarea>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" id="submitBtn" class="btn btn-primary">Add Flashcard</button>
+                    <button type="button" id="cancelBtn" class="btn btn-secondary">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Flashcards List -->
+        <div class="list-section">
+            <h2>Your Flashcards</h2>
+            <div id="flashcardsList" class="flashcards-list">
+                <p class="empty-message">No flashcards yet. Create one above!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
